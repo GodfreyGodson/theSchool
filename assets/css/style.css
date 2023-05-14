@@ -1,0 +1,2189 @@
+@charset "utf-8";
+
+/*
+***********************************
+ Theme Name     : Educa
+ Theme URI      : http://www.educa.wedevsteam.com/
+ Author Name    : Author Name here
+ Author URI     : Author URI here
+ Description    : 
+ Text Domain    : educa
+ License        : GNU General Public License v2 or later
+ License URI    : http://www.gnu.org/licenses/gpl-2.0.html
+ Version        : 1.0.0
+
+* This file contains the styling for the actual theme, this is the file you need to edit to change the look of the theme.
+
+The contents of This file are outlined below >>>>
+
+*** SEARCH EACH SECTION AS IT COMMENTS, YOU WILL GET THE RIGHT SECTION.
+
+
+
+****************************************
+      -------*** CSS Table ***-------
+             ----------------
+
+    01. IMPORT FONTS
+    02. DEFAULT CSS
+    03. PRELOADER CSS
+    04. BOTTOMtoTOP CSS
+    
+
+
+*****************************************/
+
+
+/************************************************
+     -------*** 01. IMPORT FONTS ***-------
+                ----------------
+*************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Roboto+Slab:wght@400;500;600;700;800;900&display=swap');
+
+/************************************************
+     -------*** 02. DEFAULT CSS ***-------
+                ----------------
+*************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --pcolor: #1abc9c;
+    --hcolor: #23BEA0;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+strong {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto Slab', serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s ease-in-out
+}
+
+.space-top {
+    padding-top: 100px;
+}
+
+.space-btm {
+    padding-bottom: 100px;
+}
+
+.space {
+    padding: 100px;
+}
+
+img {
+    width: 100%
+}
+
+.h {
+    height: 450px
+}
+
+/*************************************
+        01. Header Top CSS
+*************************************/
+.educa-header-top-area-start {
+    background: #1E1E1C;
+    color: #ababab;
+    padding: 10px 0
+}
+
+.educa-header-top-area-start a {
+    color: #fff;
+    font-size: 13px;
+}
+
+.educa-header-top-area-start a:hover {
+    text-decoration: underline
+}
+
+.educa-header-top-left {
+    display: flex;
+    font-size: 13px;
+    align-items: center
+}
+
+.educa-header-top-left a {
+    color: #fff;
+    font-weight: 500;
+}
+
+.educa-header-top-left i {
+    margin: 0 2px 0 25px;
+    color: #ababab;
+}
+
+.educa-header-top-right {
+    text-align: right
+}
+
+.educa-header-top-right a {
+    text-transform: capitalize;
+    padding: 0px 15px;
+    font-weight: 500;
+}
+
+.educa-header-top-right a:last-child {
+    padding-right: 0
+}
+
+
+
+
+/*************************************
+        02. Header CSS
+*************************************/
+.mobile-menu-start{
+    display: none;
+}
+header.educa-header-area-start {
+    border-bottom: 1px solid #f1f1f1;
+}
+.headerclass.sticky {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    background: #fff;
+    webkit-animation: fadeInDown 0.5s both;
+    animation: fadeInDown 0.5s both;
+}
+.educa-logo-area img {
+    width: 77%;
+}
+
+ul.educa-menu li {
+    display: inline-block;
+    position: relative
+}
+
+ul.educa-menu {
+    text-align: right;
+}
+
+ul.educa-menu li a {
+    padding: 30px 11px;
+    color: #1E1E1C
+}
+
+ul.educa-menu li:last-child a {
+    padding-right: 0
+}
+
+ul.educa-menu li a:hover,
+ul.educa-menu li:hover a {
+    color: var(--hcolor);
+}
+
+ul.dorp-menu {
+    position: absolute;
+    z-index: 99999;
+    width: 300px;
+    text-align: left;
+    background: #ffffff;
+    right: 0;
+    top: 104px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    transition: all 0.3s ease-in-out
+}
+
+ul.educa-menu li:hover ul {
+    top: 84px;
+    visibility: visible;
+    opacity: 1
+}
+
+ul.dorp-menu li {
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+ul.educa-menu li > ul.dorp-menu li a {
+    display: block;
+    padding: 14px;
+    color: #1E1E1C
+}
+
+ul.dorp-menu li:last-child {
+    border: 0;
+}
+
+ul.educa-menu li > ul.dorp-menu li a:hover {
+    background: var(--hcolor);
+    color: #fff;
+}
+
+
+
+/*************************************
+        03. Hero CSS
+*************************************/
+.educa-heroa-area-start {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    background: url('../images/hero-bg.jpg') no-repeat scroll left center / cover;
+}
+
+.educa-heroa-area-start:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background: var(--pcolor);
+    opacity: 0.9;
+    z-index: -1
+}
+
+.educa-hero-area {
+    color: #fff;
+}
+
+.educa-hero-area h3 {
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.educa-hero-area p.sub-title {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.educa-hero-area form input {
+    outline: none;
+    border: 1px solid #fff;
+    width: 55%;
+    padding: 30px;
+    margin: 27px 0;
+}
+
+
+.educa-hero-area from {
+    position: relative;
+}
+
+.educa-hero-area button.learn-btn {
+    position: relative;
+    border: navajowhite;
+    padding: 32px;
+    background: #1E1E1C;
+    color: #fff;
+    left: -5px;
+    transition: all 0.3s ease-in-out
+}
+
+.educa-hero-area button.learn-btn:hover {
+    background: #16a085
+}
+
+.educa-hero-area from input:placeholder {
+    font-style: italic
+}
+
+::-webkit-input-placeholder {
+    font-style: italic;
+}
+
+:-moz-placeholder {
+    font-style: italic;
+}
+
+::-moz-placeholder {
+    font-style: italic;
+}
+
+:-ms-input-placeholder {
+    font-style: italic;
+}
+
+.educa-hero-param {
+    width: 61%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: capitalize;
+    font-size: 14px;
+    margin-top: 32px;
+}
+
+.educa-single-param {
+    display: flex;
+    align-items: center;
+}
+
+.educa-single-param i {
+    margin-right: 10px;
+    font-size: 21px;
+    color: #1E1E1C;
+}
+
+
+/*************************************
+        04. Course Slider CSS
+*************************************/
+.educa-single-course-slider {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.educa-single-course-slider:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #000, transparent);
+    z-index: -1;
+}
+
+.educa-course-slider {
+    cursor: e-resize;
+}
+
+
+
+/*************************************
+        05. Counter CSS
+*************************************/
+.educa-coounter-part-area-start {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
+
+.educa-coounter-part-area-start:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    content: '';
+    background: #1E1E1C;
+    z-index: -1;
+    opacity: 0.8
+}
+
+.educa-single-counter-part strong {
+    font-size: 55px;
+    display: block;
+    color: var(--pcolor)
+}
+
+.educa-single-counter-part {
+    text-align: center;
+    text-transform: uppercase;
+    border-right: 1px solid #847070;
+}
+
+.col-md-3:last-child .educa-single-counter-part {
+    border: 0;
+}
+
+/*************************************
+        06. Project Title CSS
+*************************************/
+.educa-project-title {
+    margin-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative
+}
+
+.educa-project-title h2 {
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 10px
+}
+
+.educa-project-title:after {
+    position: absolute;
+    content: '';
+    width: 10%;
+    height: 1px;
+    background: #d4d4c2;
+    left: 0;
+    bottom: -17px;
+}
+
+.educa-project-title span {
+    color: #a79c9c;
+    font-weight: 300
+}
+
+.educa-project-link a {
+    border: 1px solid #c7c7bb;
+    color: #1E1E1C;
+    padding: 9px 13px;
+    border-radius: 3px;
+}
+
+.educa-project-link a:hover {
+    background: var(--pcolor);
+    color: #fff;
+    border-color: var(--pcolor);
+}
+
+/*************************************
+        07. Course CSS
+*************************************/
+.educa-single-course {
+    border: 1px solid #e4dddd;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.educa-course-image {
+    position: relative;
+    max-height: 232px;
+    overflow: hidden;
+}
+
+.educa-course-image a.learn-more {
+    position: absolute;
+    z-index: 999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: var(--pcolor);
+    padding: 10px 20px;
+    text-transform: uppercase;
+    opacity: 0;
+}
+
+.educa-course-image:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background: #000;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.educa-single-course:hover .educa-course-image:after {
+    opacity: 0.5;
+}
+
+.educa-single-course:hover .educa-course-image a.learn-more {
+    opacity: 1;
+}
+
+.educa-course-instructor img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: -29px;
+}
+
+.educa-course-instructor {
+    position: relative;
+    text-align: center;
+}
+
+.educa-course-instructor a {
+    margin-top: 43px;
+    margin-bottom: 15px;
+    color: #1E1E1C;
+    font-size: 13px;
+}
+
+.educa-course-instructor a:hover {
+    text-decoration: underline;
+}
+
+a.educa-course-title {
+    margin: 0 12px;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #1E1E1C;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.educa-course-action {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #e4dddd;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.educa-course-action span {
+    font-weight: 700;
+    color: var(--pcolor);
+}
+
+.educa-course-action a {
+    color: var(--pcolor);
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.educa-single-course:hover a.educa-course-title {
+    color: var(--pcolor);
+}
+
+.educa-single-course:hover .educa-course-action {
+    background: var(--pcolor);
+    transition: all 0.3s ease-in-out;
+}
+
+.educa-single-course:hover .educa-course-action span,
+.educa-single-course:hover .educa-course-action a {
+    color: #fff;
+}
+
+
+
+/*************************************
+        08. Event CSS
+*************************************/
+
+.educa-single-event {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e4dddd;
+    align-items: center;
+}
+
+.educa-event-date {
+    width: 20%;
+    text-align: center;
+    color: var(--pcolor);
+    border-right: 1px solid #e4dddd;
+}
+
+.educa-event-date strong {
+    font-size: 86px;
+    display: block;
+    line-height: 1;
+}
+
+.educa-event-content {
+    width: 70%;
+    padding: 0 30px;
+    border-right: 1px solid #e4dddd;
+}
+
+.educa-event-date span {
+    font-weight: 700;
+}
+
+a.educa-event-title {
+    font-size: 25px;
+    font-weight: 600;
+    color: #1E1E1C;
+    font-family: 'Roboto Slab', serif;
+    margin-bottom: 9px;
+}
+
+a.educa-event-title:hover {
+    color: var(--pcolor)
+}
+
+p.educa-event-info {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+p.educa-event-info span {
+    margin-right: 20px;
+}
+
+p.educa-event-info {
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.educa-event-img img {
+    padding: 30px;
+    border-radius: 10px;
+}
+
+
+
+/*************************************
+        09. Blog CSS
+*************************************/
+.educa-blog-area-start {
+    position: relative;
+    z-index: 1;
+    background: url('../images/counter-bg.jpg') no-repeat scroll center center / cover;
+}
+
+.educa-blog-area-start:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    content: '';
+    background: #1E1E1C;
+    opacity: 0.8;
+    z-index: -1
+}
+
+.educa-blog-info {
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+    margin: 0 auto;
+    position: relative;
+    top: -17px;
+    background: #fff;
+    color: var(--pcolor);
+    padding: 10px;
+    font-size: 12px;
+}
+
+.educa-blog-info a > img {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    position: absolute;
+    left: -11px;
+    top: -31%;
+}
+
+a.educa-blog-title {
+    color: #fff;
+    font-size: 23px;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Roboto Slab', serif;
+}
+
+a.educa-blog-title:hover {
+    color: var(--pcolor);
+}
+
+/*************************************
+        10. Client CSS
+*************************************/
+.educa-single-client {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd
+}
+
+.educa-single-client img {
+    width: 90px !important;
+    height: 90px;
+    border-radius: 50%;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    margin: 0 auto
+}
+
+.owl-item.center .educa-single-client {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)
+}
+
+.educa-single-client {
+    text-align: center;
+}
+
+.educa-single-client a {
+    display: block;
+    margin-top: 25px;
+    color: #000;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.educa-single-client span {
+    color: #aaa;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.educa-single-client p {
+    width: 95%;
+    margin: 0 auto;
+    font-size: 14px
+}
+
+.educa-single-client:hover a {
+    color: var(--pcolor)
+}
+
+/*************************************
+        11. Subscribe CSS
+*************************************/
+.educa-subscribe-area-start {
+    background: var(--pcolor);
+    color: #fff
+}
+
+.educa-subscribe-area-start h2 {
+    text-transform: uppercase;
+}
+
+.educa-subscribe-area-start p {
+    width: 70%;
+    margin: 25px auto
+}
+
+.educa-subscribe-area-start form input {
+    width: 55%;
+    padding: 32px;
+    border: 0;
+    outline: none;
+}
+
+.educa-subscribe-area-start form button.sub-btn {
+    position: relative;
+    left: -5px;
+    border: 0;
+    outline: 0;
+    padding: 35px;
+    color: #fff;
+    background: #1E1E1C;
+    text-transform: uppercase;
+    font-style: italic;
+    transition: all 0.3s ease-in-out
+}
+
+.educa-subscribe-area-start form button.sub-btn:hover {
+    background: #6EBC9D
+}
+
+.educa-subscribe-area-start form button.sub-btn i {
+    margin-left: 12px;
+}
+
+
+/*************************************
+        12. Footer CSS
+*************************************/
+.educa-footer-area-start {
+    background: #1E1E1C;
+    color: #ddd
+}
+
+h4.footer-widget-title {
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    color: #fff;
+}
+
+ul.footer-menu li a {
+    font-size: 12px;
+    color: #999;
+}
+
+ul.footer-menu li a:hover {
+    color: #fff;
+}
+
+.educa-footer-widget p {
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.educa-footer-widget img {
+    margin-bottom: 17px;
+}
+
+.educa-footer-widget p i {
+    margin-right: 18px;
+}
+
+ul.socail-media {
+    margin-top: 20px;
+}
+
+ul.socail-media li {
+    display: inline;
+}
+
+ul.socail-media li a {
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #999;
+    color: #999;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
+ul.socail-media li a:hover {
+    background: #6EBC9D;
+    color: #fff;
+}
+
+/*************************************
+        13. Btm to Top CSS
+*************************************/
+a.btm-to-top {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #6EBC9D;
+    z-index: 99999999999;
+    right: 20px;
+    bottom: 50px;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    color: #fff;
+    background: #1E1E1C;
+}
+
+a.btm-to-top:hover {
+    background: #1E1E1C;
+    color: #6EBC9D;
+}
+
+
+
+/*************************************
+        14. Breadcrumb CSS
+*************************************/
+.educa-breadcrumb-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.educa-breadcrumb-content a {
+    color: #fff;
+}
+
+.educa-breadcrumb-content span {
+    color: #ddd;
+}
+
+section.educa-breadcrumb-area-start {
+    background: url('../images/hero-bg.jpg') no-repeat scroll center center/ cover;
+    position: relative;
+    z-index: 1
+}
+
+section.educa-breadcrumb-area-start:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    z-index: -1;
+    background: var(--pcolor);
+    opacity: 0.7
+}
+
+/*************************************
+        15. About CSS
+*************************************/
+.educa-about-part-area-start .educa-single-counter-part {
+    border-right: 1px solid #ddd;
+}
+
+.educa-about-part-area-start .educa-single-counter-part strong {
+    color: #000;
+}
+
+.educa-about-main-single {
+    margin-bottom: 35px
+}
+
+.educa-about-main-single h3 {
+    margin-bottom: 21px;
+}
+
+.educa-about-main-single p {
+    margin-bottom: 12px;
+    opacity: 0.9;
+    font-size: 0.9rem
+}
+
+.educa-faq-single-format h4 {
+    margin-bottom: 30px;
+}
+
+.educa-faq-single-format button.btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    outline: 0;
+    position: relative;
+    color: #000
+}
+
+.educa-faq-single-format button:focus {
+    outline: 0;
+    text-decoration: none;
+    box-shadow: none
+}
+
+.educa-faq-single-format .card {
+    margin-bottom: 15px;
+}
+
+.educa-faq-single-format button.btn:hover {
+    text-decoration: none;
+    color: var(--pcolor);
+}
+
+.educa-faq-single-format button.btn.collapsed:after,
+.educa-faq-single-format button.btn:after {
+    position: absolute;
+    right: 0;
+    top: 7px;
+    content: '\f067';
+    font-family: 'Font Awesome 5 Pro';
+}
+
+.educa-faq-single-format button.btn:after {
+    content: '\f068'
+}
+
+.educa-faq-single-format {
+    margin-bottom: 50px
+}
+
+.educa-faq-single-format:last-child {
+    margin: 0
+}
+
+.educa-faq-single-format input,
+.educa-faq-single-format button.faq-btn,
+.educa-faq-single-format textarea {
+    margin-top: 20px
+}
+
+button.faq-btn {
+    border: 1px solid var(--pcolor);
+    padding: 15px 55px;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--pcolor);
+}
+
+button.faq-btn i {
+    margin-left: 9px;
+}
+
+
+/*************************************
+        16. Forum CSS
+*************************************/
+.educa-forum-search {
+    text-align: right;
+    padding: 14px 0;
+    background: #f1f1f1;
+}
+
+.educa-forum-search input {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 400px;
+}
+
+.educa-forum-search button {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    position: relative;
+    left: -34px;
+}
+
+.educa-forum-body tbody td a {
+    display: block;
+    color: #000;
+}
+
+.educa-forum-body tbody td a:hover {
+    color: var(--hcolor)
+}
+
+.educa-forum-body thead tr th:first-child,
+.educa-forum-body tbody tr td:first-child {
+    text-align: left
+}
+
+.educa-forum-body tbody tr td:last-child {
+    text-align: center;
+    font-size: 0.7rem
+}
+
+.educa-forum-body tbody tr td:last-child a {
+    color: var(--pcolor);
+}
+
+/*************************************
+        17. Sidebar CSS
+*************************************/
+.educa-sidebar-single-content {
+    border-left: 1px solid #ddd;
+    padding: 0 10px;
+    margin-bottom: 30px;
+}
+
+.educa-sidebar-single-content h4:after {
+    position: absolute;
+    left: -12px;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    content: '';
+    background: var(--pcolor);
+}
+
+.educa-sidebar-single-content h4 {
+    position: relative;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 1.3rem
+}
+
+.educa-sidebar-single-content form input {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+.educa-sidebar-single-content form button {
+    position: absolute;
+    right: 8px;
+    top: 14px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+
+.educa-sidebar-single-content form {
+    position: relative;
+}
+
+ul.sidebar-menu li {
+    display: block;
+}
+
+ul.sidebar-menu li a {
+    color: #000;
+    padding: 5px;
+    text-transform: capitalize;
+    display: block;
+}
+
+ul.sidebar-menu li a:hover {
+    color: var(--pcolor)
+}
+
+.educa-single-posts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 0;
+}
+
+.educa-post-img {
+    width: 125px;
+    margin-right: 12px;
+}
+
+.educa-post-content a {
+    font-size: 12px;
+    color: #000;
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+.educa-post-content span {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.educa-adds {
+    width: 100%;
+    height: 290px;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.educa-adds:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background: var(--pcolor);
+    opacity: 0.9;
+    z-index: -1;
+}
+
+.educa-adds h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.educa-adds span {
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 10px 30px;
+    border: 1px solid #fff;
+}
+
+
+
+/* Course Details Page */
+.educa-details-area-start {
+    background: #1E1E1C;
+    padding: 40px 0;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+p.educa-cat-link a {
+    color: #ECEB98;
+    font-size: 15px;
+}
+
+.educa-details-context h1 {
+    margin-bottom: 15px;
+    font-size: 47px;
+}
+
+.educa-details-context p {
+    margin-bottom: 15px;
+}
+
+a.seller-link {
+    background: #ECEB98;
+    color: #000;
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.educa-details-context span {
+    font-size: 13px;
+}
+
+a.created_link {
+    text-decoration: underline;
+    color: #ECEB98;
+}
+
+p.educa-df-btn a {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 15px;
+    padding: 12px 20px;
+    border: 1px solid #fff;
+}
+.educa-details-video-context {
+    padding: 7px;
+    background-image: linear-gradient(163deg, #c1e9e2, #fff);
+    color: #000;
+}
+
+.video-area {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    margin-bottom: 15px;
+}
+
+.video-area i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #24BFA0;
+    border-radius: 50%;
+    padding-left: 5px;
+    color: #fff;
+}
+
+.cduca-course-price {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.cduca-course-price h1 {
+    margin-right: 15px;
+}
+
+.educa-details-video-context p {
+    color: #b32d0f;
+    font-size: 14px;
+    padding: 8px 20px;
+}
+
+.cduca-cart-area {
+    padding: 0 20px;
+    margin-top:20px
+}
+
+.cduca-cart-area a {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    padding: 13px 5px;
+    color: #000;
+    font-weight: 700;
+}
+.cduca-cart-area a:hover{
+    color: #000;
+    background: #ECEB98;
+    border-color: #ECEB98;
+}
+a.educa-enroll-btn {
+    background: #1BBC9C;
+    color: #fff;
+    border-color: #1BBC9C;
+}
+.educa-whta-learn {
+    padding: 20px;
+    border: 1px solid #d1d7dc;
+}
+
+.educa-what-learn-area-start {
+    margin-bottom: 40px;
+}
+
+.educa-whta-learn h2 {
+    margin-bottom: 20px;
+}
+
+.educa-whta-learn ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.educa-whta-learn ul li {
+    width: calc(50% - (2.4rem/2));
+    font-size: 13px;
+    margin-bottom: 10px;
+    display: flex;
+}
+.educa-whta-learn ul li i {
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.educa-course-requirement ul {display: block;}
+
+.educa-course-requirement ul li {
+    width: 100%;
+}
+.educa-course-details-instructor {
+    border: 1px solid #d1d7dc;
+    padding: 20px;
+}
+
+.educa-course-details-instructor img {
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.educa-course-details-instructor p {
+    font-size: 13px;
+    padding: 3px 0;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+}
+
+.educa-course-details-instructor p i {
+    margin-right: 15px;
+}
+
+.educa-course-details-instructor {
+    margin-bottom: 40px;
+    background: #EBF8F6;
+}
+
+.educa-course-details-instructor p:last-child {
+    margin-top: 14px;
+}
+.card-body {
+    text-align: justify;
+}
+.educa-feedback-count-area {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 40px;
+}
+
+.educa-feedback-value {text-align: center;}
+
+.educa-rating-count {
+    padding: 40px;
+    background: #FBC02D;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.educa-feedback-value p {
+    color: #FBC02D;
+}
+
+.educa-feedback-given-area {
+    width: 68%;
+}
+.educa-feedback-given-area ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.educa-rating-shadow {
+    background: #F1F1F1;
+    width: 57%;
+    height: 14px;
+    border-radius: 12px;
+}
+
+.educa-feedback-given-area ul li strong {width: 22%;}
+
+.educa-feedback-given-area ul li span {
+    width: 15%;
+}
+
+.educa-rating-bg {
+    height: 14px;
+    background: #FBC02D;
+    border-radius: 14px;
+}
+.active-star{
+    color: #FBC02D;
+}
+.educa-review-show-area .media-head img {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+/* 404 Page */
+section.error-page-area-start {
+    height: 100vh;
+    width: 100%;
+    background: url('../images/404/1.jpg') no-repeat center center / contain;
+}
+
+/* Membership page */
+.educa-membership-plan-context {
+    display: flex;
+    justify-content: space-between;
+}
+
+.educa-membership-plan-context .educa-membership-single:first-child {
+    width: 35%;
+}
+.educa-plan-header {
+    padding: 38px;
+    background: #F9F9FB;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.educa-plan-header i {
+    font-size: 67px;
+    margin-right: 42px;
+    color: #1ABC9C;
+}
+
+.educa-plan-header a>i {
+    font-size: inherit;
+}
+
+.educa-plan-head-right h5 {
+    font-size: 29px;
+    font-weight: 700;
+}
+
+.educa-plan-head-right a {
+    font-weight: 500;
+    margin-top: 10px;
+    color: #1ABC9C;
+}
+h6.educa-plan-name {font-size: 20px;font-weight: 300;}
+
+.educa-plan-head h1 {
+    padding: 14px 0;
+}
+
+.educa-plan-head h1>small {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.educa-plan-head a {
+    font-size: 14px;
+    padding: 10px 23px;
+    border-radius: 5px;
+    background: #b4f2e657;
+    color: #1ABC9C;
+}
+ul.educa-plan-lists {
+    border-radius: 10px;
+    overflow: hidden;
+}
+ul.educa-plan-list-context li {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul.educa-plan-list-context li i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+    background: #1ABC9C;
+    border-radius: 50%;
+    color: #fff;
+}
+ul.educa-plan-list-context li i.fa-times{
+    background: #ff6868;
+}
+ul.educa-plan-lists li a {
+    background: #1ABC9C;
+    color: #fff;
+    display: block;
+    padding: 34px 20px;
+}
+
+ul.educa-plan-list-context li {
+    width: 100%;
+    padding: 34px 0;
+}
+
+.educa-membership-single {
+    width: 16%;
+}
+.change-active{
+    background: #1abc9c0f;
+}
+.educa-plan-body {
+    margin-top: 4px;
+}
+
+.educa-plan-body-context {
+    margin-top: 0;
+}
+
+.educa-plan-head {
+    padding: 10px 10px 10px 22px;
+}
+
+ul.educa-plan-lists li {
+    background: #1ABC9C;
+    border-bottom: 1px solid #1ecba9;
+}
+
+.educa-membership-single.active {
+    background: #1ABC9C;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.educa-membership-single.active a {
+    background: #fff;
+    color: #1ABC9C;
+    text-align: center;
+}
+
+.educa-membership-single.active ul li i {
+    background: #79f6dd;
+    color: #1ABC9C;
+}
+.educa-membership-single.active ul li i.fa-times {
+    background: #ff6868;
+    color: #fff;
+}
+
+/* Register page css */
+.educa-register-area-start {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.educa-register-area-start:before {
+    position: absolute;
+    bottom: -60%;
+    right: -18%;
+    width: 127%;
+    height: 113%;
+    content: '';
+    background: #1ABC9C;
+    transform: rotate(344deg);
+    z-index: -1;
+}
+.educa-register-context {
+    width: 100%;
+    height: 70vh;
+    background: #fff;
+    margin: 13vh auto;
+    box-shadow: -1px 0px 24px 1px #827a7a57;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.educa-register-context:before {
+    position: absolute;
+    bottom: -70%;
+    right: -18%;
+    width: 127%;
+    height: 113%;
+    content: '';
+    background: #1ABC9C;
+    transform: rotate(344deg);
+    z-index: -1;
+}
+
+.educa-register-context {
+    padding: 49px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.educa-register-left {
+    width: 50%;
+}
+
+.educa-register-right {
+    background: #fff;
+    padding: 16px;
+    border-radius: 5px;
+    box-shadow: -1px 0px 24px 1px #827a7a57;
+}
+
+.educa-register-right img {
+    width: 108px;
+    height: auto;
+    margin: 10px auto;
+    text-align: center;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.educa-register-right input {
+    margin-bottom: 25px;
+}
+
+
+
+
+.educa-register-right {
+    width: 35%;
+}
+
+
+
+.educa-register-right button {
+    border: none;
+    outline: none;
+    background: #1ABC9C;
+    color: #fff;
+    font-size: 16px;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+   
+}
+
+.educa-register-right h2 {
+    text-align: center;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 15px;
+}
+.educa-register-left h2 {
+    margin-bottom: 21px;
+    text-transform: uppercase;
+}
+.educa-register-right p a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 25px;
+    margin-top: 15px;
+}
+.educa-register-right p a i.facebook{
+    background: #4267B2;
+}
+.educa-register-right p a i.google{
+    background: #EA4335 ;
+}
+.educa-register-right p {
+    text-align: center;
+}
+.educa-contact-context {
+    display: flex;
+    box-shadow: -1px 0px 24px 1px #827a7a57;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.educa-contact-map {
+    width: 50%;
+}
+
+.educa-contact-content {
+    width: 50%;
+    padding: 35px;
+}
+.educa-contact-content h2 {
+    margin-bottom: 12px;
+}
+
+.educa-contact-content p {
+    margin-bottom: 10px;
+}
+
+.educa-contact-content input {
+    margin-bottom: 20px;
+}
+
+.educa-contact-content textarea {
+    margin-bottom: 18px;
+}
+
+.educa-contact-content button {
+    border: none;
+    outline: none;
+    width: 100%;
+    background: #1BBC9C;
+    color: #fff;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.educa-contact-content button i {
+    padding: 19px;
+    background: #1E1E1C;
+    font-size: 23px;
+}
+
+.educa-contact-content button:hover {
+    background: #42A27C;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Blog page css */
+.educa-blog-image {
+    width: 100%;
+    height: 233px;
+}
+
+.educa-blog-image img {
+    width: 100%;
+    height: 233px;
+    object-fit: cover;
+}
+
+.educa-single-blog-page {
+    margin-bottom: 30px;
+    border: 1px solid #dedede96;
+}
+
+a.educa-blog-page-title {
+    color: #000;
+    padding: 10px 10px 0 10px;
+    font-size: 20px;
+}
+
+a.educa-blog-page-title:hover {
+    color: #1BBC9D;
+}
+
+.educa-single-blog-page p {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.educa-single-blog-page p:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #dedede96;
+}
+
+.educa-single-blog-page p a {
+    color: #1BBC9D;
+}
+
+.educa-pagination-area-start {
+    text-align: center;
+}
+
+ul.educa-paginate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+ul.educa-paginate li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #1BBC9D;
+    color: #000;
+    width: 45px;
+    height: 45px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+ul.educa-paginate li.active a, ul.educa-paginate li a:hover {
+    background: #1BBC9D;
+    color: #fff;
+}
+
+.educa-single-blog-page-area h2 {
+    padding: 20px 0;
+}
+
+.educa-single-blog-page-area p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.educa-single-blog-page-area blockquote {
+    font-style: italic;
+    font-size: 18px;
+    padding: 15px;
+    background: #f1f1f1;
+    font-weight: 500;
+    border-radius: 9px;
+}
+.educa-comment-area form {
+    margin: 33px 0;
+}
+
+.educa-comment-area textarea {
+    margin-bottom: 10px;
+}
+
+.educa-comment-area button.comment-btn {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: var(--pcolor);
+    color: #fff;
+    padding: 10px 30px;
+}
+
+/* Event Page css */
+.educa-event-hero-area-start {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
+
+.educa-event-hero-area-start:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background: var(--pcolor);
+    z-index: -1;
+    opacity: 0.9;
+}
+
+.educa-event-hero-context h1 {
+    font-size: 78px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.educa-event-hero-context p {
+    margin-bottom: 30px;
+}
+div#countdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.timer-wrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff; 
+    width: 100px;
+    height: 90px;
+    margin-bottom:30px;
+    border-radius: 5px
+}
+.timer-wrapper .time{
+    font-size: 30px;
+    font-weight: 700
+}
+.timer-wrapper .text{
+    text-transform: capitalize;
+    font-size: 14px;
+    color: #f2f2f2
+}
+
+/* Instructors CSS */
+.educa-instructor-context {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.educa-single-instructor {
+    width: 23%;
+    margin: 1%;
+    padding: 10px;
+    background: #f1f1f1;
+    border-radius: 6px;
+}
+
+.educa-single-instructor img {
+    width: 100%;
+    height: 255px;
+    object-fit: cover;
+}
+
+.educa-single-instructor a {
+    display: block;
+    padding: 10px 0 0 0;
+    color: #000;
+    font-weight: 500;
+}
+
+.educa-single-instructor span {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.educa-single-instructor:hover a {
+    color: var(--pcolor);
+}
+section.educa-createinstructor {
+    position: relative;
+    z-index: 1;
+}
+
+section.educa-createinstructor:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    content: '';
+    background: var(--pcolor);
+    opacity: 0.9;
+    z-index: -1;
+}
+.educa-create-instructor-context {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.educa-createinstructor-context {
+    color: #fff;
+}
+
+.educa-createinstructor-context h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+button.create-btn {
+    outline: none;
+    background: #000;
+    color: #fff;
+    padding: 20px 31px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #fff;
+}
+
+button.create-btn:hover {
+    background: var(--pcolor);
+}
+.educa-single-instructor-profile img {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background: #f1f1f1;
+    border-radius: 8px;
+}
+
+.educa-single-instructor-profile h4 {
+    padding: 15px 0 0 0;
+}
+
+.educa-single-instructor-profile span {
+    display: block;
+    font-size: 13px;
+    opacity: 0.7;
+    margin-top: 8px;
+}
+
+.educa-instructor-bio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+}
+
+ul.rating {
+    display: flex;
+    color: #FBC02D;
+    align-items: center;
+    gap: 3px;
+    font-size: 13px;
+}
+
+.educa-single-bio span {
+    font-size: 12px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.educa-single-bio h4 {
+    font-size: 17px;
+}
+
+p.biodata {
+    text-align: justify;
+}
+
+/* Quiz Page CSS */
+.educa-quiz-filters {
+    margin-bottom: 30px;
+}
+
+.educa-quiz-filters form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.educa-quiz-filters form select {
+    width: 250px;
+}
+
+button.filter-btn {
+    border: none;
+    outline: none;
+    padding: 15px 45px;
+    background: var(--pcolor);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.educa-single-quiz-context {
+    margin-bottom: 30px;
+    border: 1px solid #f1f1f1;
+    border-radius: 7px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.educa-single-quiz-context img {
+    width: 100%;
+    height: 170px;
+    transition: all 0.3s ease-in-out;
+}
+.educa-single-quiz-context a {
+    display: block;
+    padding: 11px;
+    color: #000;
+    font-weight: 500;
+}
+.educa-single-quiz-context:hover a{
+    color: var(--hcolor);
+}
+p.educa-quiz-context {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px;
+    border-top: 1px solid #f1f1f1;
+}
+
+p.educa-quiz-context span {
+    font-size: 12px;
+}
+
+p.educa-quiz-context span>i {
+    margin-right: 6px;
+}
+
+span.educa-price {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    z-index: 99;
+    background: var(--pcolor);
+    color: #fff;
+    font-size: 14px;
+    display: inline-block;
+    padding: 1px 5px;
+    border-radius: 5px;
+}
+
+.educa-single-breadcrumb {
+    border: 1px solid #ddd;
+}
+
+.educa-single-quiz-header {
+    padding: 25px;
+    border-bottom: 1px solid #ddd;
+    background: #F8F8FE;
+    box-shadow: -1px -3px 14px 2px #f1f1f1;
+}
+
+.educa-single-quiz-body {
+    padding: 30px;
+    box-shadow: 1px 3px 14px 2px #f1f1f1;
+}
+
+.educa-single-quiz-body p {
+    margin-bottom: 10px;
+}
+
+.educa-single-quiz-body strong {
+    font-weight: 500;
+}
+
+.quiz-btn {
+    border: none;
+    outline: none;
+    background: var(--pcolor);
+    color: #fff;
+    padding: 26px 30px;
+    margin-top: 30px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.quiz-btn:hover{
+    background: var(--hcolor);
+}
+form.disable-form .submit-btn {
+    margin-top: 30px;
+    border: 0;
+    outline: none;
+    padding: 19px 30px;
+    border-radius: 5px;
+    background: var(--pcolor);
+    color: #fff;
+}
+.educa-contact-map iframe {
+    width: 100%;
+}
+

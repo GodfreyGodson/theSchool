@@ -1,0 +1,634 @@
+/*Responsive menu*/
+.mobile-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-menu-logo a>img {
+    width: 117px;
+}
+
+.slicknav_menu {
+    background: transparent;
+    padding: 0;
+    position: relative;
+}
+.slicknav_menu .slicknav_icon-bar {
+    background-color: #2FBF9E;
+}
+.slicknav_btn{
+    margin: 0;
+}
+a.slicknav_btn.slicknav_collapsed {
+    margin: 0;
+    background: transparent;
+    padding: 18px 0;
+}
+
+a.slicknav_btn.slicknav_open {
+    background: transparent;
+    padding: 18px 0;
+}
+
+ul.slicknav_nav {
+    position: absolute;
+    right: 0;
+    top: 53px;
+    background: #fff;
+    z-index: 9999999;
+    width: 250px;
+    border: 1px solid #f1f1f1;
+    border-top: 0;
+    max-height: 384px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+span.slicknav_menutxt {
+    display: none!important;
+}
+.slicknav_menu .slicknav_icon-bar {
+    background-color: #2FBF9E;
+}
+ul.slicknav_nav li a {
+    margin: 0;
+    color: #000;
+    padding: 13px;
+}
+
+ul.slicknav_nav li {
+    border-bottom: 1px solid #f1f1f1;
+}
+ul.slicknav_nav li:last-child {
+    border: 0;
+}
+.slicknav_nav .slicknav_row, .slicknav_nav a {
+    padding: 13px;
+    margin: 0;
+}
+.slicknav_nav .slicknav_arrow {
+    display: none;
+}
+
+ul.slicknav_nav li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.slicknav_nav .slicknav_row:hover {
+    border-radius: 0;
+    background: #2DBC9B;
+    color: #fff;
+}
+
+a.slicknav_item.slicknav_row {
+    padding: 0;
+}
+.slicknav_nav .slicknav_item a, .slicknav_nav .slicknav_parent-link a {
+    padding: 13px;
+    margin: 0;
+    display: flex;
+    border-radius: 0;
+}
+.slicknav_nav a:hover {
+    border-radius: 0;
+}
+ul.slicknav_nav li:last-child {
+    border: 0;
+}
+
+.slicknav_parent ul.dorp-menu li a {
+    color: #000!important;
+}
+
+.slicknav_parent ul.dorp-menu {
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+    box-shadow: none!important;
+    transition: none;
+    background: #dddddd26;
+}
+
+.mobile-menu-link a {
+    color: #000;
+    padding: 7px;
+}
+
+.mobile-menu-link {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+/* For 767 Resolution */
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px) {
+    p{
+        font-size: 12px;
+    }
+    .large-version-hearer{
+        display: none;
+    }
+    .mobile-menu-start{
+        display: block;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    .space {
+        padding: 30px 0;
+    }
+    .educa-hero-area h3{
+        font-size: 34px;
+    }
+    .educa-hero-area p.sub-title{
+        font-size: 18px;
+    }
+    .educa-hero-area form input{
+        margin: 0;
+        width: 76%;
+        padding: 16px;
+    }
+    .educa-hero-area button.learn-btn{
+        padding: 17px;
+    }
+    .educa-hero-area form input::placeholder {
+        font-size: 12px;
+    }
+    .educa-hero-param {
+        width: 100%;
+        margin-top: 30px;
+        gap: 7px;
+    }
+    
+    .educa-single-param {
+        flex-flow: column;
+        border: 1px solid #fff;
+        padding: 13px 10px;
+        border-radius: 5px;
+    }
+    
+    .educa-single-param p {
+        font-size: 11px;
+    }
+    
+    .educa-single-param i {
+        margin-bottom: 10px;
+        color: #fff;
+    }
+
+    .educa-project-title h2 {font-size: 20PX;}
+
+    .educa-project-text {width: 69%;}
+
+    .educa-project-link {
+        width: 28%;
+    }
+
+    .educa-project-title span {
+        font-size: 13px;
+    }
+
+    .educa-project-text br {
+        display: none;
+    }
+
+    .educa-project-link a {
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .educa-project-title{
+        margin-bottom: 30px;
+    }
+    .educa-course-area-start.space-btm {
+        padding: 0;
+    }
+    .educa-event-area-start.space {
+        padding: 30px 0;
+    }
+    .educa-single-counter-part{
+        border: 0;
+        padding: 15px 10px;
+    }
+    .educa-single-counter-part strong{
+        font-size: 23px;
+    }
+    .educa-single-counter-part span{
+        font-size: 12px;
+    }
+    .educa-event-content{
+        border-right: 0;
+    }
+    .educa-event-date {
+        border-right: 0;
+    }
+    .educa-single-event{
+        padding: 30px 0 0;
+        flex-flow: column;
+    }
+    .educa-event-content {
+        width: 100%;
+        padding: 0;
+        font-size: 14px;
+    }
+    
+    .educa-event-date {
+        width: 100%;
+    }
+    
+    a.educa-event-title {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+    
+    p.educa-event-info span {
+        font-size: 13px;
+        font-weight: 400;
+    }
+    
+    p.educa-event-info {
+        justify-content: space-between;
+    }
+    .educa-blog-area-start.space {
+        padding: 30px 0px;
+    }
+    
+    .educa-single-blog {
+        margin-bottom: 30px;
+    }
+    
+    .educa-blog-image a {
+        display: block;
+    }
+    
+    .educa-blog-info {
+        width: 34%;
+        border-radius: 10px;
+        top: -26px;
+    }
+    
+    .educa-subscribe-area-start.space {
+        padding: 30px 0;
+    }
+    
+    .educa-subscribe-area-start h2 {
+        font-size: 26px;
+    }
+    
+    .educa-subscribe-area-start p {
+        width: 100%;
+    }
+    
+    .educa-subscribe-area-start form input {
+        width: 56%;
+        padding: 13px;
+    }
+    
+    .educa-subscribe-area-start form button.sub-btn {
+        padding: 13px;
+    }
+    footer.educa-footer-area-start.space {
+        padding: 0 0 30px 0;
+    }
+    
+    .educa-footer-widget {
+        margin-top: 30px;
+    }
+    
+    .educa-footer-widget h4 {
+        margin-bottom: 11px;
+    }
+    
+    .educa-footer-widget img {
+        width: 150px;
+    }
+    .educa-client-area-start.space {
+        padding: 30px 0;
+    }
+    ul.socail-media li a{
+        width: 33px;
+        height: 33px;
+        font-size: 15px;
+    }
+    section.educa-breadcrumb-area-start.space {
+        padding: 40px 10px;
+    }
+    
+    .educa-breadcrumb-content h1 {
+        font-size: 16px;
+    }
+    
+    .educa-breadcrumb-content a {
+        font-size: 12px;
+    }
+    
+    .educa-breadcrumb-content span {
+        font-size: 12px;
+    }
+
+    section.educa-breadcrumb-area-start.space {
+        padding: 40px 10px;
+    }
+    
+    .educa-breadcrumb-content h1 {
+        font-size: 16px;
+    }
+    
+    .educa-breadcrumb-content a {
+        font-size: 12px;
+    }
+    
+    .educa-breadcrumb-content span {
+        font-size: 12px;
+    }
+    
+    .educa-quiz-filters form {
+        flex-flow: column;
+        gap: 0;
+    }
+    
+    .educa-quiz-filters form select {
+        width: 100%;
+    }
+    
+    .educa-quiz-filters form {
+        width: 100%;
+    }
+    
+    .educa-quiz-filters form .form-group {
+        width: 100%;
+    }
+    
+    section.educa-quiz-area-start.space {
+        padding: 30px 0;
+    }
+    
+    .educa-quiz-filters {
+        margin: 00;
+    }
+
+    .educa-pagination-area-start {
+        width: 95%;
+    }
+    
+    ul.educa-paginate li a {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .educa-single-quiz-context img {
+        height: 300px;
+    }
+
+    .educa-details-area-start {
+        padding: 30px 0;
+    }
+    
+    .educa-details-context h1 {
+        font-size: 22px;
+    }
+    
+    .educa-details-context p {
+        font-size: 13px;
+    }
+    
+    .video-area img {
+        height: 220px;
+        object-fit: cover;
+    }
+    
+    .educa-whta-learn ul li {
+        width: 100%;
+    }
+    
+    .card-body {
+        font-size: 12px;
+    }
+    
+    .educa-feedback-value {
+        width: 30%;
+        margin: 0 auto;
+        margin-bottom: 14px;
+    }
+    
+    .educa-rating-count {
+        padding: 11px;
+    }
+    
+    .educa-feedback-value p {
+        font-size: 11px;
+    }
+    
+    .educa-feedback-given-area ul li strong {
+        font-weight: 500;
+        font-size: 14px;
+    }
+    
+    .educa-feedback-given-area {
+        width: 100%;
+    }
+    
+    .educa-feedback-count-area {
+        flex-flow: column;
+    }
+
+    .educa-single-instructor {
+        width: 100%;
+    }
+    
+    .educa-instructor-context {
+        gap: 20px;
+    }
+
+    .educa-createinstructor-context{
+        text-align: center;
+    }
+
+    .educa-create-instructor-context {
+        flex-flow: column;
+    }
+    
+    .educa-createinstructor-context h1 {
+        font-size: 31px;
+        margin-bottom: 10px;
+    }
+    
+    button.create-btn {
+        margin-top: 20px;
+    }
+    
+    .educa-event-hero-context h1 {
+        font-size: 30px;
+    }
+    
+    div#countdown {
+        gap: 6px;
+    }
+    
+    .educa-event-hero-context h2 {
+        font-size: 20px;
+    }
+    
+    .timer-wrapper .time {
+        font-size: 20px;
+    }
+    
+    .timer-wrapper {
+        width: 67px;
+        height: 67px;
+        border-radius: 5px;
+    }
+    
+    .timer-wrapper .text {
+        font-size: 12px;
+    }
+
+    .educa-about-part-area-start .educa-single-counter-part {
+        border: 0;
+    }
+
+    .educa-forum-search input{
+        width: 89%;
+    }
+
+    .educa-membership-plan-context {
+        flex-flow: column;
+    }
+    
+    .educa-membership-single, .educa-membership-plan-context .educa-membership-single:first-child {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .educa-plan-head {
+        border-bottom: 1px solid #f1f1f1;
+    }
+
+    .educa-contact-context {
+        flex-flow: column;
+    }
+    
+    .educa-contact-map, .educa-contact-content {
+        width: 100%;
+    }
+
+}
+
+/* For 1024 Resolution */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .educa-logo-area img{
+        width: 100%;
+    }
+    ul.educa-menu li a{
+        padding: 20px 4px;
+    }
+    .space{
+        padding: 70px 0;
+    }
+    .educa-hero-param{
+        width: 100%;
+    }
+    .educa-hero-area form input{
+        width: 70%;
+    }
+    .space-btm {
+        padding-bottom: 40px;
+    }
+    .educa-single-counter-part strong{
+        font-size: 32px;
+    }
+    .educa-event-date{
+        width: 15%;
+    }
+    .educa-event-date strong{
+        font-size: 47px;
+    }
+    .educa-event-content{
+        width: 60%;
+        padding: 15px;
+    }
+    .educa-event-img {
+        width: 25%;
+    }
+    a.educa-event-title {
+        font-size: 18px;
+    }
+    p.educa-event-info {
+        justify-content: space-between;
+    }
+    p.educa-event-info span {
+        font-weight: 400;
+        font-size: 13px;
+    }
+    .educa-blog-info{
+        width: 69%;
+        border-radius: 10px;
+        top: -34px;
+    }
+    a.educa-blog-title{
+        font-size: 18px;
+    }
+    .educa-quiz-filters form{
+        flex-flow: wrap;
+    }
+    .video-area{
+        height: 132px;
+    }
+    .cduca-course-price{
+        display: block;
+    }
+    .educa-whta-learn h2{
+        font-size: 20px;
+    }
+    .educa-feedback-count-area{
+        display: block;
+    }
+    .educa-feedback-given-area {
+        width: 100%;
+        margin-top: 15px;
+    }
+    .educa-single-instructor{
+        width: 31.2%;
+    }
+    .educa-single-instructor img{
+        height: 192px;
+    }
+    .educa-createinstructor-context h1{
+        font-size: 40px;
+    }
+    .educa-membership-plan-context{
+        display: block;
+    }
+    .educa-membership-plan-context .educa-membership-single:first-child{
+        width: 50%;
+    }
+    .educa-membership-single{
+        float: left;
+        width: 50%;
+        margin-bottom: 15px;
+    }
+    ul.educa-menu li:hover ul{
+        left: auto;
+        top: 65px;
+        right: 0
+    }
+
+}
+
+/* For 1366 Resolution */
+@media only screen and (min-width: 1030px) and (max-width: 1366px) {}
+
+@media only screen and (min-width: 1367px) {}
+
+/* If you're looking to supply different graphics or choose different typography for the lower resolution iPad display, the media queries below will work. */
+/* Orientation : Landscape */
+@media only screen and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 1) and (min-device-width : 768px) and (max-device-width : 1007px) {}
+
+@media only screen and (device-width : 414px) and (device-height : 896px) and (-webkit-device-pixel-ratio : 2) {}
+
+@media only screen and (device-width : 414px) and (device-height : 896px) and (-webkit-device-pixel-ratio : 3) {}
