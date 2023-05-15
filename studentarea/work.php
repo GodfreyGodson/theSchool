@@ -32,7 +32,7 @@ include ('header.php');
                     // Make AJAX request to get the exam categories
                     echo '<script>
                         $.ajax({
-                            url: "http://localhost:3000/api/exam",
+                            url: "http://api.theschool.ac.tz/api/exam",
                             type: "GET",
                             success: function(response) {
                                 var examCategories = response.examCategories;
