@@ -72,7 +72,7 @@ include('includes/header.php');
 
       // Send the request to update the enrollment status
       const enrollmentId = enrollment._id;
-      fetch(`http://localhost:3000/api/enrollments/${enrollmentId}`, {
+      fetch(`http://api.theschool.ac.tz/api/enrollments/${enrollmentId}`, {
         method: 'PUT',
         body: JSON.stringify({ isPaid: newStatus }),
         headers: {
