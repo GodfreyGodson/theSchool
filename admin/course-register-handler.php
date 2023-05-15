@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $url = 'http://localhost:3000/api/courses';
+    $url = 'http://api.theschool.ac.tz/api/courses';
 
     // Get the file data
     $files = $_FILES['files'];
