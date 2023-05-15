@@ -124,7 +124,7 @@ form.addEventListener('submit', (event) => {
   }
   console.log(selectedCourse); // console log the selectedCourse variable
   const data = { email, course: selectedCourse }; // modified object with "course" instead of "selectedCourse"
-  fetch('http://localhost:3000/api/student', {
+  fetch('http://api.theschool.ac.tz/api/student', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
