@@ -4,7 +4,7 @@
             <div class="col-md-12">
                 <div class="mobile-menu">
                     <div class="mobile-menu-logo">
-                        <a href="index.html"><img src="assets/images/logo/logo.png" alt="Mobile Logo"></a>
+                        <a href="index.html"><img src="assets/images/logo/theschool-logo (2).jpeg" alt="Mobile Logo"></a>
                     </div>
                     <div class="mobile-menu-link">
                         <a href="register.php"><i class="fal fa-user"></i> Register</a>
@@ -26,7 +26,7 @@
                     <div class="educa-header-top-left">
                         Have any Question?
                         <div id="phone"><i class="fal fa-phone"></i> <a href="tell:+255 759 366 141">+255 759 366 141</a></div>
-                        <div id="email"><i class="fal fa-envelope"></i> <a href="mailto:info@theSchool.edu">info@theSchool.edu</a></div>
+                        <div id="email"><i class="fal fa-envelope"></i> <a href="mailto:info@theSchool.ac.tz">info@theSchool.ac.tz</a></div>
                         <div id="profile"><i class="fal fa-user"></i> <a href="javascript:void(0)">Hello, theSchool</a></div>
                     </div>
                 </div>
