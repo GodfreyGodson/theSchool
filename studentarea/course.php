@@ -36,7 +36,7 @@ if(@$_GET['q']==2)
     let courseId;
 
     $.ajax({
-      url: "http://localhost:3000/api/courses",
+      url: "http://api.theschool.ac.tz/api/courses",
       type: "GET",
       headers: {
         Authorization: "Bearer " + JSON.parse(sessionStorage.getItem("user")).token,
