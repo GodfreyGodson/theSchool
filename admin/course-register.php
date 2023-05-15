@@ -74,7 +74,7 @@ form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const formData = new FormData(form);
   try {
-    const response = await fetch('http://localhost:3000/api/courses', {
+    const response = await fetch('http://api.theschool.ac.tz/api/courses', {
       method: 'POST',
       body: formData
     });
