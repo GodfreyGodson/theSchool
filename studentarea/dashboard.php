@@ -32,7 +32,7 @@ include ('header.php');
                             <div class="col-md-6">   
                             <div class="col-md-6">';
                             // Make an AJAX request to the endpoint to get the list of exam categories
-                            $url = 'http://localhost:3000/api/exam';
+                            $url = 'http://api.theschool.ac.tz/api/exam';
                             $response = file_get_contents($url);
                             $response_array = json_decode($response, true);
                             echo '<form class="form-horizontal title1" name="form" action="" method="POST" onsubmit="updateSessionVariable()">
