@@ -69,7 +69,7 @@
 let currentQuestion = 0;
 let questions = [];
 
-fetch('http://localhost:3000/api/questions/<?php echo $_SESSION["selected_exam"] ?>')
+fetch('http://api.theschool.ac.tz/api/questions/<?php echo $_SESSION["selected_exam"] ?>')
   .then(response => response.json())
   .then(data => {
     questions = data.map(q => ({
