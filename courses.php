@@ -204,7 +204,7 @@
     div.classList.add('col-md-4', 'col-lg-3');
     div.innerHTML = `
       <div class="educa-single-quiz-context">
-        <img src="http://localhost:3000/${course.image}" alt="${course.title}">
+        <img src="http://api.theschool.ac.tz/${course.image}" alt="${course.title}">
         <a href="course-details.php">${course.title}</a>
         <p class="educa-quiz-context">
           <span><i class="fal fa-book"></i> Best Seller</span>
@@ -238,7 +238,7 @@
   }
 
   function fetchCourses(page) {
-    fetch(`http://localhost:3000/api/course?page=${page}&limit=8`)
+    fetch(`http://api.theschool.ac.tz/api/course?page=${page}&limit=8`)
       .then(response => response.json())
       .then(data => {
         totalPages = data.pages;
