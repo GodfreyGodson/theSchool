@@ -70,7 +70,7 @@ if(@$_GET['q']==2)
       const token = JSON.parse(sessionStorage.getItem("user")).token; // replace with your actual auth token
       const headers = new Headers();
       headers.append("Authorization", `Bearer ${token}`);
-      const request = new Request(`http://localhost:3000/api/courses/${courseId}/notes`, {
+      const request = new Request(`http://api.theschool.ac.tz/api/courses/${courseId}/notes`, {
         headers: headers,
       });
       fetch(request)
