@@ -54,7 +54,7 @@ include('includes/header.php');
 
 
 <script>
-  fetch("http://localhost:3000/api/courses")
+  fetch("http://api.theschool.ac.tz/api/courses")
     .then(response => response.json())
     .then(courses => {
       const tbody = document.getElementById("table-body");
@@ -81,7 +81,7 @@ include('includes/header.php');
         
         // add event listener to the delete button
         deleteBtn.addEventListener('click', async () => {
-  const response = await fetch(`http://localhost:3000/api/courses/${course.id}`, {
+  const response = await fetch(`http://api.theschool.ac.tz/api/courses/${course.id}`, {
     method: 'DELETE'
   });
   const result = await response.json();
