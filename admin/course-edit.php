@@ -76,7 +76,7 @@ const params = new URLSearchParams(window.location.search);
 const courseId = params.get("id");
 
 // Fetch the course data and set the values of the input fields in the form
-fetch("http://localhost:3000/api/course/" + courseId)
+fetch("http://api.theschool.ac.tz/api/course/" + courseId)
   .then(response => response.json())
   .then(course => {
     document.getElementById("title").value = course.title;
@@ -96,7 +96,7 @@ form.addEventListener("submit", (event) => {
   const description = formData.get('description');
   const price = formData.get('price');
   
-  fetch(`http://localhost:3000/api/courses/${courseId}`, {
+  fetch(`http://api.theschool.ac.tz/api/courses/${courseId}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json"
