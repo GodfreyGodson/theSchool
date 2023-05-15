@@ -31,7 +31,7 @@ include ('header.php');
                     // Make AJAX request to get the exam categories
                     echo '<script>
                     $.ajax({
-                        url: "http://localhost:3000/api/exam",
+                        url: "http://api.theschool.ac.tz/api/exam",
                         type: "GET",
                         success: function(response) {
                             var examCategories = response.examCategories;
@@ -57,7 +57,7 @@ include ('header.php');
                     
                                 // Make AJAX request to get the results for the selected exam category
                                 $.ajax({
-                                    url: "http://localhost:3000/api/results/" + examCategory,
+                                    url: "http://api.theschool.ac.tz/api/results/" + examCategory,
                                     type: "GET",
                                     success: function(response) {
                                         console.log(response);
