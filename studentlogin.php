@@ -169,7 +169,7 @@ include 'header/navbar.php';
     const email = loginForm.elements.email.value;
     const password = loginForm.elements.password.value;
     
-    const response = await fetch('http://localhost:3000/api/login', {
+    const response = await fetch('http://api.theschool.ac.tz/api/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
