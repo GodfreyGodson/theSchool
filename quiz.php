@@ -116,13 +116,13 @@
             <div class="col-md-12">
                 <div class="educa-quiz-filters">
 
-<form action="localhost:3000/api/exam/filter-categories" method="GET">
+<form action="http://api.theschool.ac.tz/api/exam/filter-categories" method="GET">
  <?php
                      // Initialize cURL
 $ch = curl_init();
 
 // Set the endpoint URL
-curl_setopt($ch, CURLOPT_URL, "localhost:3000/api/ecategories");
+curl_setopt($ch, CURLOPT_URL, "http://api.theschool.ac.tz/api/ecategories");
 
 // Return the response as a string
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -157,7 +157,7 @@ echo'<div class="form-group">';
 $ch = curl_init();
 
 // Set the endpoint URL
-curl_setopt($ch, CURLOPT_URL, "localhost:3000/api/levels");
+curl_setopt($ch, CURLOPT_URL, "http://api.theschool.ac.tz/api/levels");
 
 // Return the response as a string
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -224,7 +224,7 @@ echo'<div class="form-group">';
     $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
     // Set the endpoint URL with the current page number
-    curl_setopt($ch, CURLOPT_URL, "http://localhost:3000/api/exam?page=$page");
+    curl_setopt($ch, CURLOPT_URL, "http://api.theschool.ac.tz/api/exam?page=$page");
 
     // Return the response as a string
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -398,7 +398,7 @@ echo'<div class="form-group">';
         const category = document.querySelector('#category').value;
         const level = document.querySelector('#level').value;
         const price = document.querySelector('#price').value;
-        const url = `localhost:3000/api/exam/filter-categories?examCategory=${category}&level=${level}&isPaid=${price}`;
+        const url = `http://api.theschool.ac.tz/api/exam/filter-categories?examCategory=${category}&level=${level}&isPaid=${price}`;
         window.location.href = url;
     });
 </script>
