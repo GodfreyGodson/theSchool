@@ -31,7 +31,7 @@ include ('header.php');
                     // Make AJAX request to get the courses
                     echo '<script>
                     $.ajax({
-                        url: "http://localhost:3000/api/courses",
+                        url: "http://api.theschool.ac.tz/api/courses",
                         type: "GET",
                         headers: {
                             Authorization: "Bearer " + JSON.parse(sessionStorage.getItem("user")).token
@@ -60,7 +60,7 @@ include ('header.php');
                                console.log(JSON.parse(sessionStorage.getItem("user")).token);
                                // Make AJAX request to download the notes for the selected course
 $.ajax({
-  url: "http://localhost:3000/api/courses/" + courseId + "/notes",
+  url: "http://api.theschool.ac.tz/api/courses/" + courseId + "/notes",
   type: "GET",
   headers: {
     Authorization: "Bearer " + JSON.parse(sessionStorage.getItem("user")).token
@@ -74,7 +74,7 @@ $.ajax({
       if (enrollment && enrollment.isPaid) {
         // Download the notes
         $.ajax({
-          url: "http://localhost:3000/api/courses/" + courseId + "/notes/download",
+          url: "http://api.theschool.ac.tz/api/courses/" + courseId + "/notes/download",
           type: "GET",
           headers: {
             Authorization: "Bearer " + JSON.parse(sessionStorage.getItem("user")).token
