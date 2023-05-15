@@ -69,7 +69,7 @@
 let currentQuestion = 0;
 let questions = [];
 
-fetch('http://localhost:3000/api/questions/<?php echo $_SESSION["selected_exam"] ?>')
+fetch('http://api.theschool.ac.tz/api/questions/<?php echo $_SESSION["selected_exam"] ?>')
   .then(response => response.json())
   .then(data => {
     questions = data.map(q => ({
@@ -133,7 +133,7 @@ const nextQuestion = () => {
 
     // Send data to Node.js endpoint using AJAX
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://localhost:3000/api/results', true);
+    xhr.open('POST', 'http://api.theschool.ac.tz/api/results', true);
     xhr.setRequestHeader('Content-type', 'application/json');
     xhr.send(JSON.stringify({
       question: question,
