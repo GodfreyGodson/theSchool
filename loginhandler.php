@@ -11,7 +11,7 @@
   $json_data = json_encode($data);
 
   // Set up cURL
-  $url = "localhost:3000/api/login"; // Replace with the actual API endpoint URL
+  $url = "http://api.theschool.ac.tz/api/login"; // Replace with the actual API endpoint URL
   $ch = curl_init();
   curl_setopt($ch, CURLOPT_URL, $url);
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
