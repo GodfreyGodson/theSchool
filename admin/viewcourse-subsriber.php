@@ -43,7 +43,7 @@
 
 <script>
   // Fetch the course data from the Node.js endpoint
-  fetch('http://localhost:3000/api/courses')
+  fetch('http://api.theschool.ac.tz/api/courses')
     .then(response => response.json())
     .then(data => {
       // Loop through the course data and add it to the HTML table
@@ -67,7 +67,7 @@
         btn.addEventListener('click', async () => {
           try {
             const courseId = btn.dataset.courseId;
-            const response = await fetch(`http://localhost:3000/api/course/${courseId}`);
+            const response = await fetch(`http://api.theschool.ac.tz/api/course/${courseId}`);
             const data = await response.json();
             console.log(data); // Log the obtained data
               /* save the requested data in the session */
